@@ -122,12 +122,12 @@ console.log('Задание 8: ' + animals);
 //Задание 9
 // Выведите символы в строке в консоль
 const str = 'Hello';
-function split(string) {
+function splitStr(string) {
   for (let letter of string) {
     console.log('Задание 9: ' + letter);
   }
 }
-split(str);
+splitStr(str);
 
 //-----------------------------------------
 
@@ -317,7 +317,12 @@ function askNum () {
   let totalSum = 0;
   while(totalSum < 100) {
     let num = +prompt('Введите число', 0);
-    totalSum += num;
+    if (typeof num === 'number' && !isNaN(num)) {
+      totalSum += num;
+    } else {
+      alert('Вы ввели не число, необходимо ввести число');
+      continue;
+    }
   }
   console.log('Задание 22: сумма введённых чисел = ' + totalSum);
 }
@@ -329,13 +334,18 @@ askBtn.addEventListener('click', askNum);
 
 //Задание 23
 // Напишите функцию, которая изменит фоновый цвет всех элементов <h4> на странице на синий цвет
-function addColor() {
+// function addColor() {
+//   const titles4 = document.querySelectorAll('h4');
+//   if(titles4.length) titles4.forEach(item => item.style.backgroundColor = 'blue');
+// }
+
+function addColor2() {
   const titles4 = document.querySelectorAll('h4');
-  titles4.forEach(item => item.style.backgroundColor = 'blue');
+  if(titles4.length) titles4.forEach(item => item.classList.toggle('blue'));
 }
 
 const colorBtn = document.querySelector('.ask-color');
-colorBtn.addEventListener('click', addColor);
+colorBtn.addEventListener('click', addColor2);
 
 //-----------------------------------------
 

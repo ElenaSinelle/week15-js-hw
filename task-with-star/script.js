@@ -14,7 +14,7 @@ console.log(`Filled in array: [${numbers}]`);
 //operation applied to array numbers using array methods (array numbers stays unchanged)
 //delete all negative numbers
 let notNegativeArr = numbers.filter(num => !(num < 0));
-console.log(`Array with not negative numbers: [${notNegativeArr}]`);
+console.log(`Array with non-negative numbers: [${notNegativeArr}]`);
 
 //square items in array
 let squareArr = numbers.map(num => num ** 2);
