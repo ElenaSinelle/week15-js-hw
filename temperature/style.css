@@ -1,0 +1,95 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --main-color:  #fbf6f6;
+}
+body,
+input {
+  font-family: 'Arial', sans-serif;
+  font-size: 20px;
+  color: var(--main-color);
+}
+
+body {
+  min-width: 100vw;
+  min-height: 100vh;
+  background: url("../assets/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.general__container {
+  padding: 1em;
+}
+
+.general__title {
+  text-align: center;
+}
+
+.weather__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  text-align: left;
+  padding: 1em;
+}
+
+.city {
+  width: 20em;
+  height: 3em;
+  padding: 0.3em;
+  font-size: 1em;
+  line-height: 1.2em;
+  color: var(--main-color);
+  border: 0;
+  outline: 0;
+  border-bottom: 1px solid var(--main-color);
+  background-color: transparent;
+}
+
+.city::placeholder {
+  font-size: 1em;
+  color: var(--main-color);
+  opacity: 0.5;
+}
+
+.calc__container {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+}
+
+.calc__button {
+  width: 10em;
+  height: 3em;
+  font-size: 1em;
+  line-height: 1.2em;
+  border-radius: 0.2em;
+  border: transparent;
+  background-color: var(--main-color);
+  opacity: 0.5;
+  cursor: pointer;
+  transition: all ease 0.5s;
+}
+
+.calc__button:hover {
+  opacity: 1;
+}
+
+.calc__button:active {
+  transform: scale(0.95);
+  opacity: 1;
+}
+
+.calc__min,
+.calc__max {
+  min-width: 20em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4em;
+}
